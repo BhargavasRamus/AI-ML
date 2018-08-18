@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Number of training samples
 N = 10
-# Generate equispaced floats in the interval [0, 2π]
+# Generate equispaced floats in the interval [0, 2pi]
 x = np.linspace(0, 2*np.pi, N)
 # Generate noise
 mean = 0
@@ -14,7 +14,9 @@ y = np.sin(x)
 y += np.random.normal(mean, std, N)
 
 xT=x.reshape((-1,1))
+# transpose of x
 x0=np.full(np.shape(x),1)
+# 1D matrix with 1as elements
 print "enter the highest degree of the poynomial="
 m=input()
 m= int(m)
@@ -28,5 +30,6 @@ W = np.matmul(np.linalg.pinv(X),y)
 print "W="
 print W
 Y=np.matmul(X,W)
+# y'=xw
 plt.plot(x,y,'*',X,Y,'-')
 plt.show()
