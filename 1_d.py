@@ -23,7 +23,11 @@ Y=np.matmul(X,W)
 plt.plot(x,y,'*',X,Y,'-')
 plt.show()
 
-error=Y-y
+print "enter the standard deviation of labels="
+std1 = input()
+std1=float(std1)
+labels = np.random.normal(Y,std1,N)
+error=Y-labels
 variance= np.var(error)
 print "variance in y:"
 print variance
