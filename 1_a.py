@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Number of training samples
 N = 10
-# Generate equispaced floats in the interval [0, 2π]
+# Generate equispaced floats in the interval [0, 2pi]
 x = np.linspace(0, 2*np.pi, N)
 # Generate noise
 mean = 0
