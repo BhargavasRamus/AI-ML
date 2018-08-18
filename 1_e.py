@@ -21,7 +21,7 @@ m= int(m)
 X=np.full(np.shape(x),1)
 for i in range(1,m,1)
     X_=x**i
-    X=np.column_stack(X,X_)
+    X=np.column_stack((X,X_))
 print X
 # basis function
 print "enter the value of Lagrangian multiplier="
