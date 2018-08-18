@@ -14,7 +14,6 @@ y = np.sin(x)
 y += np.random.normal(mean, std, N)
 
 xT=x.reshape((-1,1))
-x0=np.full(np.shape(x),1)
 print "enter the highest degree of the poynomial="
 m=input()
 m= int(m)
