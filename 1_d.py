@@ -24,5 +24,6 @@ plt.plot(x,y,'*',X,Y,'-')
 plt.show()
 
 error=Y-y
+variance= np.var(error)
 print "variance in y:"
-print error
+print variance
