@@ -15,7 +15,7 @@ y += np.random.normal(mean, std, N)
 x=x.reshape((-1,1))
 # transpise of x
 x0=np.full(np.shape(x),1)
-X=np.column_stack(x0,x)
+X=np.column_stack((x0,x))
 # 2D matrix
 W = np.zeros((N,N))
 W = np.matmul(np.linalg.pinv(X),y)
