@@ -13,18 +13,20 @@ y = np.sin(x)
 # Add noise
 y += np.random.normal(mean, std, N)
 
-xT=x.reshape((-1,1))
+x=x.reshape((-1,1))
 # transpose of x
 x0=np.full(np.shape(x),1)
 # 1D matrix with 1as elements
 print "enter the highest degree of the poynomial="
 m=input()
 m= int(m)
+# order of polynomial
 X=np.full(np.shape(x),1)
 for i in range(1,m,1)
     X_=x**i
     X=np.column_stack(X,X_)
 print X
+# basis function
 W = np.zeros((N,N))
 W = np.matmul(np.linalg.pinv(X),y)
 print "W="
