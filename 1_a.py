@@ -12,7 +12,7 @@ std = 0.05
 y = np.sin(x)
 # Add noise
 y += np.random.normal(mean, std, N)
-xT=x.reshape((-1,1))
+x=x.reshape((-1,1))
 # transpose of matrix x
 x0=np.full(np.shape(x),1)
 # forms a 1D matrix with all elements as 1
