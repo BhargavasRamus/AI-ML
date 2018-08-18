@@ -1,3 +1,4 @@
-# AI_ML
-assignment_18/08
+# AI_ML_ASSIGNMENT
 python 3
+
+a) plotting of a linear 
