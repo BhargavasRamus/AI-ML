@@ -13,12 +13,17 @@ y = np.sin(x)
 # Add noise
 y += np.random.normal(mean, std, N)
 xT=x.reshape((-1,1))
+# transpose of matrix x
 x0=np.full(np.shape(x),1)
+# forms a 1D matrix with all elements as 1
 X=np.column_stack(x0,x)
+# stacks a 2D matrix 
 W = np.zeros((N,N))
+# initating a null matrix
 W = np.matmul(np.linalg.pinv(X),y)
 print "W="
 print W
 Y=np.matmul(X,W)
+# y'=xw
 plt.plot(x,y,'*',X,Y,'-')
 plt.show()
